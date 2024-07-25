@@ -88,5 +88,12 @@ function Camecasing(text)
 {
     return text.replace(/\b\w/g,l=>l.toUpperCase(""))
 }
-console.log(Camecasing("hello world"))
+// console.log(Camecasing("hello world"))
+
+function debouncer(word,delay)
+{
+    return function
+}
+
+
 
