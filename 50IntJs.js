@@ -1,3 +1,5 @@
+const { camelCase } = require("yargs-parser")
+
 function sum(a,b)
 {
     return a+b
@@ -58,6 +60,33 @@ function prime(inn)
 // console.log(prime(4))
 function largestInNested(inarray)
 {
-    
+    let biggest = inarray[0][0]
+
+    for (let i = 0 ; i<inarray.length;i++)
+    {
+        if(biggest < Math.max(...inarray[i]))
+        {
+            biggest = Math.max(...inarray[i])
+        }
+    }
+    return biggest
 }
+// console.log(largestInNested([[1,5,3,53],[3,5,7,2,564,7]]))
+function fibsequence(number)
+{
+    let fib = [0,1]
+
+    for(let i = 0 ; i<= number ; i++)
+    {
+        fib.push(fib[i]+fib[i+1])
+    }
+    return fib
+}
+// console.log(fibsequence(20))
+
+function Camecasing(text)
+{
+    return text.replace(/\b\w/g,l=>l.toUpperCase(""))
+}
+console.log(Camecasing("hello world"))
 
